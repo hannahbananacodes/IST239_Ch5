@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 Assignment</title>
+
+    <script>
+        function input_output() {
+            let usd = parseFloat(prompt("Enter amount in USD ($):"));
+            if (isNaN(usd)) {
+                alert("Please refresh the page and enter a valid number!");
+            }
+            else {
+                let eur = 0.93;
+                let dkk = 6.97
+                let sek = 11.13;
+                let jpy = 147.78;
+                let xpf = 111.95;
+                document.write("<p>$" + usd + " in U.S. Currency is approximately equivalent to:</p>")
+                document.write("<p>" + calc_exchange(usd, eur) + " EUR (Euros) <img src='euro.png'></p>");
+                document.write("<p>" + calc_exchange(usd, dkk) + " DKK (Danish Kroner) <img src='denmark.png'</p>");
+                document.write("<p>" + calc_exchange(usd, sek) + " SEK (Swedish Kronor) <img src='sweden.png'</p>");
+                document.write("<p>" + calc_exchange(usd, jpy) + " JPY (Japanese Yen) <img src='japan.png'</p>");
+                document.write("<p>" + calc_exchange(usd, xpf) + " XPF (CFP Francs) <img src='fp.png'</p>");
+                document.write("<p style='font-size: 12px'>flag icons by <a href='https://icons8.com/' style='color: white'>Icons8</a></p>")
+            }
+        }
+
+        function calc_exchange(dollars, code) {
+            converted = (dollars * code);
+            return amount = converted.toFixed(2);
+        }
+    </script>
+    <style>
+        img {
+            height: 25px;
+        }
+        }
+    </style>
+</head>
+<body style="background-color: navy; color: white; font-size: 18px; font-family: Arial">
+    <script>
+        input_output();
+    </script>
+</body>
+</html>
